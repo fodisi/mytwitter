@@ -1,0 +1,12 @@
+
+# virtualenv env
+# # source env/bin/activate
+# pip3 install -U flask
+# pip3 install -U flask_marshmallow
+# pip3 install -U flask-sqlalchemy
+# pip3 install -U marshmallow-sqlalchemy
+
+# flask
+# flask_marshmallow
+# flask-sqlalchemy
+# marshmallow-sqlalchemy

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>My Twitter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/docs/4.1/examples/sign-in/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center"></body>
+<form action="{{ url_for( 'auth.register') }}" method="POST" class="form-signin" enctype="multipart/form-data">
+    <img class="mb-4" src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Create your MyTwitter account</h1>
+    {% if error %}
+    <p> {{error}} </p>
+    {% endif %}
+    <label for="inputLogin" class="sr-only">Username</label>
+    <input name="email" type="email" id="inputLogin" class="form-control" placeholder="Username" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="inputFirstName" class="sr-only">First Name</label>
+    <input name="firstName" type="text" id="inputFirstName" class="form-control" placeholder="FirstName" required autofocus>
+    <label for="inputLogin" class="sr-only">Last Name</label>
+    <input name="lastName" type="text" id="inputLastname" class="form-control" placeholder="LastName" required autofocus>
+    <span class="btn btn-default btn-file">
+        Profile picture
+        <input type="file" name="image">
+    </span>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Francis Odisi - 2018</p>
+</form>
+</body>
+
+</html>
