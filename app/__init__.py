@@ -7,9 +7,9 @@ from flask_marshmallow import Marshmallow
 from .app_factory import ApplicationFactory
 
 # Define the WSGI application object
-app = Flask(__name__)
-app.config.from_object('config')
-# app = ApplicationFactory.create_application('../config.py')
+# app = Flask(__name__)
+# app.config.from_object('config')
+app = ApplicationFactory.create_application('../config.py')
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
